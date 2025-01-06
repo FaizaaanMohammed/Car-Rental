@@ -30,7 +30,7 @@ export default function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={logo} alt="" style={{ width: "77px", height: "22px", backgroundColor: "#000" }} />
+        <img src={logo} alt="" style={{ width: "77px", height: "22px" }} />
       </Typography>
       <Divider />
       <List>
@@ -74,7 +74,7 @@ export default function Navbar(props) {
                 textAlign: "left",
               }}
             >
-              <img src={logo} alt="" style={{ width: "77px", height: "22px", backgroundColor: "#000" }} />
+              <img src={logo} alt="" style={{ width: "77px", height: "22px" }} />
             </Typography>
 
             <Typography
