@@ -1,0 +1,17 @@
+
+
+@media (max-width:361px){
+    .bannerCar{
+        width: 280px;
+    }
+}
+@media (max-width:376px){
+    .bannerCar{
+        width: 290px;
+    }
+}
+@media (max-width:426px){
+    .bannerCar{
+        width: 310px;
+    }
+}
