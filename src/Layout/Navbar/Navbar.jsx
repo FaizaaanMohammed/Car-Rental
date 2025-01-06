@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 import logo from "../../Assets/images/Logo.png";
 
+
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Popular", "Featured"];
 

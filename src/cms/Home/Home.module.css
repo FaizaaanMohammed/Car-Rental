@@ -4,14 +4,32 @@
     .bannerCar{
         width: 280px;
     }
+    .technologyPicture{
+        width: 310px!important;
+        height: 208px!important;
+    }
 }
 @media (max-width:376px){
     .bannerCar{
         width: 290px;
+    }
+    .technologyPicture{
+        width: 312px!important;
+        height: 208px!important;
     }
 }
 @media (max-width:426px){
     .bannerCar{
         width: 310px;
     }
+    .break{
+        display:none;
+    }
+    .technologyPicture{
+        width: 340px!important;
+        height: 208px!important;
+    }
+}
+.technology{
+   backdrop-filter: blur(16px);
 }
