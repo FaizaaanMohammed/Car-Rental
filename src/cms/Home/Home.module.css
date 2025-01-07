@@ -8,8 +8,11 @@
         width: 310px!important;
         height: 208px!important;
     }
+    .cardBag{
+        right: 20px!important;
+    }
 }
-@media (max-width:376px){
+@media (min-width:361px) and (max-width:376px){
     .bannerCar{
         width: 290px;
     }
@@ -17,8 +20,11 @@
         width: 312px!important;
         height: 208px!important;
     }
+    .cardBag{
+        right: 28px!important;
+    }
 }
-@media (max-width:426px){
+@media (min-width:376px) and (max-width:426px){
     .bannerCar{
         width: 310px;
     }
@@ -29,7 +35,20 @@
         width: 340px!important;
         height: 208px!important;
     }
+    .cardBag{
+        right: 52px!important;
+    }
+}
+@media (min-width:427px) and (max-width:769px){
+    .cardBag{
+        right: 32px!important;
+    }
 }
 .technology{
    backdrop-filter: blur(16px);
 }
+/* Make sure Swiper takes full width */
+.swiper-pagination{
+    background-color: white !important; /* Change dot color to white */
+    top: -20px!important;
+  }
