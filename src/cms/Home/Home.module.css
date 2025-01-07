@@ -11,6 +11,9 @@
     .cardBag{
         right: 20px!important;
     }
+    .break{
+        display: none;
+    }
 }
 @media (min-width:361px) and (max-width:376px){
     .bannerCar{
@@ -22,6 +25,9 @@
     }
     .cardBag{
         right: 28px!important;
+    }
+    .break{
+        display: none;
     }
 }
 @media (min-width:376px) and (max-width:426px){
@@ -37,6 +43,9 @@
     }
     .cardBag{
         right: 52px!important;
+    }
+    .break{
+        display: none;
     }
 }
 @media (min-width:427px) and (max-width:769px){

@@ -27,6 +27,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Pagination } from "swiper/modules";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const Home = () => {
   const temp = [
@@ -336,7 +337,7 @@ const Home = () => {
                   justifyContent: "center",
                   alignItems: "flex-start",
                   flexDirection: "column",
-                  paddingLeft: { md: "50px" },
+                  paddingLeft: { md: "50px",xs:"10px" },
                 }}
               >
                 <Typography
@@ -359,7 +360,7 @@ const Home = () => {
                     fontWeight: "500",
                     fontFamily: "Exo",
                     lineHeight: "140%",
-                    paddingBottom: { xs: "40px", sm: "40px" },
+                    paddingBottom: { xs: "30px", sm: "40px" },
                     letterSpacing: "0%",
                   }}
                 >
@@ -373,7 +374,7 @@ const Home = () => {
                   <Button
                     variant="contained"
                     sx={{
-                      padding: "15px 35px",
+                      padding: {xs:"10px 20px",sm:"15px 35px"},
                       textTransform: "capitalize",
                       fontFamily: "Exo",
                     }}
@@ -534,8 +535,8 @@ const Home = () => {
                                   fontSize: "13px",
                                 }}
                               >
-                                <SpeedIcon sx={{ marginRight: "8px" }} /> 3.4
-                                sec
+                                <TrendingUpIcon sx={{ marginRight: "8px" }} /> 356
+                                km/h
                               </span>
                             </CardContent>
                             <CardContent
