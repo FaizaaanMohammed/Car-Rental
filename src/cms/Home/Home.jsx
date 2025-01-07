@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Container,
@@ -484,7 +483,6 @@ const Home = () => {
                               <Typography
                                 variant="body2"
                                 sx={{
-                                  color: "text.secondary",
                                   fontSize: "16px",
                                   fontWeight: "500",
                                   fontFamily: "Exo",
