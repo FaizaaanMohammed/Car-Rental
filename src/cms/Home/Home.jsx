@@ -27,7 +27,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Pagination } from "swiper/modules";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import map from "../../Assets/images/Map.png";
+import featuredCar from "../../Assets/images/featured-car.png";
 
 const Home = () => {
   const temp = [
@@ -337,7 +339,7 @@ const Home = () => {
                   justifyContent: "center",
                   alignItems: "flex-start",
                   flexDirection: "column",
-                  paddingLeft: { md: "50px",xs:"10px" },
+                  paddingLeft: { md: "50px", xs: "10px" },
                 }}
               >
                 <Typography
@@ -374,7 +376,7 @@ const Home = () => {
                   <Button
                     variant="contained"
                     sx={{
-                      padding: {xs:"10px 20px",sm:"15px 35px"},
+                      padding: { xs: "10px 20px", sm: "15px 35px" },
                       textTransform: "capitalize",
                       fontFamily: "Exo",
                     }}
@@ -404,7 +406,7 @@ const Home = () => {
               fontWeight: "600",
               fontFamily: "Exo",
               lineHeight: "140%",
-              paddingBottom: {xs:"40px",sm:"80px"},
+              paddingBottom: { xs: "40px", sm: "80px" },
             }}
           >
             Choose Your Electric Car <br /> Of The Porsche Brand
@@ -464,7 +466,7 @@ const Home = () => {
                               borderRadius: "20px",
                               backgroundColor: "#111213",
                               paddingBottom: "5px",
-                              overflow:"hidden"
+                              overflow: "hidden",
                             }}
                           >
                             <CardContent>
@@ -535,8 +537,8 @@ const Home = () => {
                                   fontSize: "13px",
                                 }}
                               >
-                                <TrendingUpIcon sx={{ marginRight: "8px" }} /> 356
-                                km/h
+                                <TrendingUpIcon sx={{ marginRight: "8px" }} />{" "}
+                                356 km/h
                               </span>
                             </CardContent>
                             <CardContent
@@ -596,13 +598,13 @@ const Home = () => {
                                 width: "100px",
                                 height: "100px",
                                 position: "absolute",
-                                backgroundColor:"rgb(55,74,150,50%)",
-                                top:"10",
-                                left:"75px",
-                                filter:"blur(48px)",
-                                zIndex:"1",
-                                borderRadius:"50%",
-                                opacity:"150%"
+                                backgroundColor: "rgb(55,74,150,50%)",
+                                top: "10",
+                                left: "75px",
+                                filter: "blur(48px)",
+                                zIndex: "1",
+                                borderRadius: "50%",
+                                opacity: "150%",
                               }}
                             ></Box>
                           </Card>
@@ -614,6 +616,168 @@ const Home = () => {
               </Swiper>
             </Box>
           </Grid>
+        </Container>
+      </Box>
+      {/* end porsche brand */}
+      {/* start Features section */}
+      <Box
+        sx={{
+          backgroundColor: "#0A0A0B",
+          padding: { xs: "50px 0px", sm: "80px 0px" },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Typography
+            sx={{
+              color: "#fff",
+              textAlign: "center",
+              fontSize: "24px",
+              fontFamily: "Exo",
+              lineHeight: "140%",
+              fontWeight: "600",
+            }}
+          >
+            More Features
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+              width:"100%",
+              overflow:"hidden"
+            }}
+          >
+            <img src={map} alt="" className={Hero.featuredMap} />
+            <Box sx={{ position: "absolute", top: {xs:"90px",sm:"135px"} }}>
+              <img src={featuredCar} alt="" className={Hero.featuredCar} />
+            </Box>
+            <Box
+              sx={{
+                width: {xs:"111px",sm:"127px"},
+                height: {xs:"84px",sm:"92px"},
+                position: "absolute",
+                left: { xs: "30px", md: "400px",sm:"190px" },
+                top: { xs: "155px", md: "200px",sm:"240px" },
+                borderRadius: "20px",
+                backgroundColor: "rgb(255,255,255,10%)",
+                backdropFilter: "blur(14px)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+               
+              }}
+              className={Hero.firstFeaturedCard}
+            >
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  lineHeight: "140%",
+                  fontFamily: "Exo",
+                  paddingBottom: "5px",
+                }}
+              >
+                800v
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "13px",
+                  textAlign: "center",
+                  fontFamily: "Exo",
+                  lineHeight: "140%",
+                }}
+              >
+                Turbo <br /> Charging
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: {xs:"111px",sm:"127px"},
+                height: {xs:"84px",sm:"92px"},
+                position: "absolute",
+                left: { xs: "30px", md: "400px",sm:"190px" },
+                top: { xs: "290px", md: "395px",sm:"410px" },
+                borderRadius: "20px",
+                backgroundColor: "rgb(255,255,255,10%)",
+                backdropFilter: "blur(14px)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+              className={Hero.secondFeaturedCard}
+            >
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  lineHeight: "140%",
+                  fontFamily: "Exo",
+                  paddingBottom: "5px",
+                }}
+              >
+                480
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "13px",
+                  textAlign: "center",
+                  fontFamily: "Exo",
+                  lineHeight: "140%",
+                }}
+              >
+                km <br /> Travel
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: {xs:"111px",sm:"127px"},
+                height: {xs:"84px",sm:"92px"},
+                position: "absolute",
+                left: { xs: "190px", md: "625px",sm:"400px" },
+                top: { xs: "220px", md: "265px",sm:"295px" },
+                borderRadius: "20px",
+                backgroundColor: "rgb(255,255,255,10%)",
+                backdropFilter: "blur(14px)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+              className={Hero.thirdFeaturedCard}
+            >
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  lineHeight: "140%",
+                  fontFamily: "Exo",
+                  paddingBottom: "5px",
+                }}
+              >
+                350
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: "13px",
+                  textAlign: "center",
+                  fontFamily: "Exo",
+                  lineHeight: "140%",
+                }}
+              >
+                km <br /> Range
+              </Typography>
+            </Box>
+          </Box>
         </Container>
       </Box>
     </>

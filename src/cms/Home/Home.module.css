@@ -14,6 +14,13 @@
     .break{
         display: none;
     }
+    .featuredMap{
+        height: 480px;
+    }
+    .featuredCar{
+        width: 150px;
+        height: 356px;
+    }
 }
 @media (min-width:361px) and (max-width:376px){
     .bannerCar{
@@ -28,6 +35,13 @@
     }
     .break{
         display: none;
+    }
+    .featuredMap{
+        height: 480px;
+    }
+    .featuredCar{
+        width: 150px;
+        height: 356px;
     }
 }
 @media (min-width:376px) and (max-width:426px){
@@ -46,6 +60,23 @@
     }
     .break{
         display: none;
+    }
+    .featuredMap{
+        height: 480px;
+    }
+    .featuredCar{
+        width: 150px;
+        height: 356px;
+    }
+    .firstFeaturedCard{
+        left: 50px!important;
+        top: 160px!important ;
+    }
+    .secondFeaturedCard{
+        left: 50px!important;
+    }
+    .thirdFeaturedCard{
+        left: 220px!important;
     }
 }
 @media (min-width:427px) and (max-width:769px){
