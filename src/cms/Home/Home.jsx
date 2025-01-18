@@ -6,6 +6,7 @@ import {
   CardMedia,
   Container,
   Grid,
+  Tab,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -30,6 +31,15 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import map from "../../Assets/images/Map.png";
 import featuredCar from "../../Assets/images/featured-car.png";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
+import tesla from "../../Assets/images/tesla.png";
+import audi from "../../Assets/images/Audi.png";
+import porsche from "../../Assets/images/porsche.png";
+import luxury1 from "../../Assets/images/luxury1.png";
+import luxury2 from "../../Assets/images/luxury2.png";
+import luxury3 from "../../Assets/images/luxury3.png";
+import luxury4 from "../../Assets/images/luxury4.png";
+import luxury5 from "../../Assets/images/luxury5.png";
 
 const Home = () => {
   const temp = [
@@ -88,6 +98,114 @@ const Home = () => {
       price: "$175,900",
     },
   ];
+
+  // luxury cards
+  const luxuryCards = [
+    {
+      id: 1,
+      title: "Tesla",
+      description: "Description of Car 1",
+      img: luxury1,
+      model: "Model X",
+      price: "$175,900",
+    },
+    {
+      id: 2,
+      title: "Tesla",
+      description: "Description of Car 2",
+      img: luxury2,
+      model: "Model 3",
+      price: "$114,900",
+    },
+    {
+      id: 3,
+      title: "Audi",
+      description: "Description of Car 3",
+      img: luxury3,
+      model: "E-tron",
+      price: "$175,900",
+    },
+    {
+      id: 4,
+      title: "Porsche",
+      description: "Description of Car 1",
+      img: luxury4,
+      model: "Boxster 987",
+      price: "$175,900",
+    },
+    {
+      id: 5,
+      title: "Porsche",
+      description: "Description of Car 2",
+      img: luxury5,
+      model: "Panamera",
+      price: "$114,900",
+    },
+  ];
+
+  // teslaLuxuryCar 
+  const TeslaluxuryCards = [
+    {
+      id: 1,
+      title: "Tesla",
+      description: "Description of Car 1",
+      img: luxury1,
+      model: "Model X",
+      price: "$175,900",
+    },
+    {
+      id: 2,
+      title: "Tesla",
+      description: "Description of Car 2",
+      img: luxury2,
+      model: "Model 3",
+      price: "$114,900",
+    }
+  ];
+
+  // AudiLuxuryCar
+  const AudiluxuryCards = [
+    {
+      id: 3,
+      title: "Audi",
+      description: "Description of Car 3",
+      img: luxury3,
+      model: "E-tron",
+      price: "$175,900",
+    },
+   
+  ];
+
+  // PorscheLuxuryCar
+ 
+  const PorscheluxuryCards = [
+    {
+      id: 4,
+      title: "Porsche",
+      description: "Description of Car 1",
+      img: luxury4,
+      model: "Boxster 987",
+      price: "$175,900",
+    },
+    {
+      id: 5,
+      title: "Porsche",
+      description: "Description of Car 2",
+      img: luxury5,
+      model: "Panamera",
+      price: "$114,900",
+    },
+  ];
+
+
+
+  // tabs
+  const [value, setValue] = React.useState("1");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <Box sx={{ backgroundColor: "#0A0A0B", paddingBottom: "70px" }}>
@@ -645,21 +763,23 @@ const Home = () => {
               justifyContent: "center",
               alignItems: "center",
               position: "relative",
-              width:"100%",
-              overflow:"hidden"
+              width: "100%",
+              overflow: "hidden",
             }}
           >
             <img src={map} alt="" className={Hero.featuredMap} />
-            <Box sx={{ position: "absolute", top: {xs:"90px",sm:"135px"} }}>
+            <Box
+              sx={{ position: "absolute", top: { xs: "90px", sm: "135px" } }}
+            >
               <img src={featuredCar} alt="" className={Hero.featuredCar} />
             </Box>
             <Box
               sx={{
-                width: {xs:"111px",sm:"127px"},
-                height: {xs:"84px",sm:"92px"},
+                width: { xs: "111px", sm: "127px" },
+                height: { xs: "84px", sm: "92px" },
                 position: "absolute",
-                left: { xs: "30px", md: "400px",sm:"190px" },
-                top: { xs: "155px", md: "200px",sm:"240px" },
+                left: { xs: "30px", md: "400px", sm: "190px" },
+                top: { xs: "155px", md: "200px", sm: "240px" },
                 borderRadius: "20px",
                 backgroundColor: "rgb(255,255,255,10%)",
                 backdropFilter: "blur(14px)",
@@ -667,7 +787,6 @@ const Home = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
-               
               }}
               className={Hero.firstFeaturedCard}
             >
@@ -697,11 +816,11 @@ const Home = () => {
             </Box>
             <Box
               sx={{
-                width: {xs:"111px",sm:"127px"},
-                height: {xs:"84px",sm:"92px"},
+                width: { xs: "111px", sm: "127px" },
+                height: { xs: "84px", sm: "92px" },
                 position: "absolute",
-                left: { xs: "30px", md: "400px",sm:"190px" },
-                top: { xs: "290px", md: "395px",sm:"410px" },
+                left: { xs: "30px", md: "400px", sm: "190px" },
+                top: { xs: "290px", md: "395px", sm: "410px" },
                 borderRadius: "20px",
                 backgroundColor: "rgb(255,255,255,10%)",
                 backdropFilter: "blur(14px)",
@@ -738,11 +857,11 @@ const Home = () => {
             </Box>
             <Box
               sx={{
-                width: {xs:"111px",sm:"127px"},
-                height: {xs:"84px",sm:"92px"},
+                width: { xs: "111px", sm: "127px" },
+                height: { xs: "84px", sm: "92px" },
                 position: "absolute",
-                left: { xs: "190px", md: "625px",sm:"400px" },
-                top: { xs: "220px", md: "265px",sm:"295px" },
+                left: { xs: "190px", md: "625px", sm: "400px" },
+                top: { xs: "220px", md: "265px", sm: "295px" },
                 borderRadius: "20px",
                 backgroundColor: "rgb(255,255,255,10%)",
                 backdropFilter: "blur(14px)",
@@ -780,6 +899,595 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
+      {/* end featured section */}
+      {/* start luxury car section */}
+      <Box
+        sx={{
+          backgroundColor: "#0A0A0B",
+          padding: { xs: "50px 0px", sm: "80px 0px" },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Typography
+            sx={{
+              color: "#fff",
+              textAlign: "center",
+              fontSize: "24px",
+              fontFamily: "Exo",
+              lineHeight: "140%",
+              fontWeight: "600",
+              paddingBottom: "80px",
+            }}
+          >
+            Featured Luxury Cars
+          </Typography>
+          <Box sx={{ width: "100%", typography: "body1" }}>
+            <TabContext value={value}>
+              <Box
+                sx={{
+                  borderBottom: 1,
+                  borderColor: "divider",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <TabList
+                  onChange={handleChange}
+                  aria-label="lab API tabs example"
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "space-between",
+                    "& .MuiTab-root": {
+                      color: "#fff",
+                      backgroundColor: "#4177DC",
+                      maxWidth: "52px",
+                      height: "52px",
+                      borderRadius: "16px",
+                      textDecoration: "none",
+                      "&:hover": {
+                        backgroundColor: "inherit", // No background change on hover
+                        color: "inherit", // No text color change on hover
+                      },
+                    },
+                  }}
+                >
+                  <Tab
+                    label="All"
+                    value="1"
+                    sx={{
+                      color: "#fff",
+                      backgroundColor: "#111213!important",
+                      minWidth: "52px!important",
+                      height: "52px",
+                      borderRadius: "16px",
+                      marginRight: "20px",
+                      fontFamily: "Exo",
+                      "&.Mui-selected": {
+                        backgroundColor: "#4177DC!important", // Keeps the background color the same
+                        color: "#fff", // Keeps the text color the same
+                      },
+                    }}
+                  />
+                  <Tab
+                    icon={
+                      <img
+                        src={tesla}
+                        alt="Item Two"
+                        style={{
+                          width: "24px", // Adjust image width
+                          height: "24px", // Adjust image height
+                        }}
+                      />
+                    }
+                    value="2"
+                    sx={{
+                      color: "#fff",
+                      backgroundColor: "#111213!important",
+                      minWidth: "52px!important",
+                      height: "52px",
+                      borderRadius: "16px",
+                      marginRight: "20px",
+                      "&.Mui-selected": {
+                        backgroundColor: "#4177DC!important", // Keeps the background color the same
+                        color: "#fff", // Keeps the text color the same
+                      },
+                    }}
+                  />
+                  <Tab
+                    icon={
+                      <img
+                        src={audi}
+                        alt="Item Two"
+                        style={{
+                          width: "24px", // Adjust image width
+                          height: "24px", // Adjust image height
+                        }}
+                      />
+                    }
+                    value="3"
+                    sx={{
+                      color: "#fff",
+                      backgroundColor: "#111213!important",
+                      minWidth: "52px!important",
+                      height: "52px",
+                      borderRadius: "16px",
+                      marginRight: "20px",
+                      opacity: "100%",
+                      "&.Mui-selected": {
+                        backgroundColor: "#4177DC!important", // Keeps the background color the same
+                        color: "#fff", // Keeps the text color the same
+                      },
+                    }}
+                  />
+                  <Tab
+                    icon={
+                      <img
+                        src={porsche}
+                        alt="Item Two"
+                        style={{
+                          width: "24px", // Adjust image width
+                          height: "24px", // Adjust image height
+                        }}
+                      />
+                    }
+                    value="4"
+                    sx={{
+                      color: "#fff",
+                      backgroundColor: "#111213!important",
+                      minWidth: "52px!important",
+                      height: "52px",
+                      borderRadius: "16px",
+                      marginRight: "0px",
+                      "&.Mui-selected": {
+                        backgroundColor: "#4177DC!important", // Keeps the background color the same
+                        color: "#fff!important", // Keeps the text color the same
+                      },
+                    }}
+                  />
+                </TabList>
+              </Box>
+              <TabPanel value="1" sx={{marginTop:"50px",position:"relative"}}>
+                <Grid container>
+                  {luxuryCards?.map((item) => {
+                    return (
+                      <>
+                        
+                          <Grid
+                            sx={{ display: "flex", justifyContent: "center" }}
+                            xs={12} sm={6} md={4}
+                          >
+                            <Card
+                              sx={{
+                                minWidth: 290,
+                                padding: "20px 5px",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "flex-start",
+                                flexDirection: "column",
+                                borderRadius: "20px",
+                                backgroundColor: "#111213",
+                                paddingBottom: "5px",
+                                overflow: "hidden",
+                                marginBottom:"50px"
+                              }}
+                            >
+                              <CardContent>
+                                <Typography
+                                  gutterBottom
+                                  variant="h5"
+                                  component="div"
+                                  sx={{
+                                    fontSize: "24px",
+                                    fontWeight: "600",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  {item.title}
+                                </Typography>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontSize: "16px",
+                                    fontWeight: "500",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                    paddingBottom: "40px",
+                                  }}
+                                >
+                                  {item.model}
+                                </Typography>
+                              </CardContent>
+                              <CardMedia
+                                sx={{
+                                  height: 100,
+                                  width: "200px",
+                                  margin: "auto",
+                                }}
+                                image={item.img}
+                                title={item.title}
+                              />
+
+                              <CardContent
+                                sx={{
+                                  paddingTop: "40px",
+                                  color: "#fff",
+                                  paddingBottom: "5px",
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    fontSize: "20px",
+                                    fontFamily: "Exo",
+                                    fontWeight: "600",
+                                    paddingLeft: "3px",
+                                    paddingBottom:"25px"
+                                  }}
+                                >
+                                  {item.price}
+                                </Typography>
+                              </CardContent>
+                              <Box
+                                sx={{
+                                  width: "56px",
+                                  height: "46px",
+                                  backgroundColor: "#4177DC",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  borderRadius: "20px 0px 20px 0px",
+                                  position: "absolute",
+                                  right: "435px",
+                                  bottom: "75px",
+                                  zIndex: "9876737",
+                                }}
+                                className={Hero.cardBag}
+                              >
+                                <LocalMallIcon sx={{ color: "#fff" }} />
+                              </Box>
+                              <Box
+                                sx={{
+                                  width: "100px",
+                                  height: "100px",
+                                  position: "absolute",
+                                  backgroundColor: "rgb(55,74,150,50%)",
+                                  top: "10",
+                                  left: "75px",
+                                  filter: "blur(48px)",
+                                  zIndex: "1",
+                                  borderRadius: "50%",
+                                  opacity: "150%",
+                                }}
+                              ></Box>
+                            </Card>
+                          </Grid>
+                        
+                      </>
+                    );
+                  })}
+                </Grid>
+              </TabPanel>
+              <TabPanel value="2" sx={{marginTop:"50px",position:"relative"}}>
+              <Grid container>
+                  {TeslaluxuryCards?.map((item) => {
+                    return (
+                      <>
+                        
+                          <Grid
+                            sx={{ display: "flex", justifyContent: "center" }}
+                            xs={12} sm={6} md={4}
+                          >
+                            <Card
+                              sx={{
+                                minWidth: 290,
+                                padding: "20px 5px",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "flex-start",
+                                flexDirection: "column",
+                                borderRadius: "20px",
+                                backgroundColor: "#111213",
+                                paddingBottom: "5px",
+                                overflow: "hidden",
+                                marginBottom:"50px"
+                              }}
+                            >
+                              <CardContent>
+                                <Typography
+                                  gutterBottom
+                                  variant="h5"
+                                  component="div"
+                                  sx={{
+                                    fontSize: "24px",
+                                    fontWeight: "600",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  {item.title}
+                                </Typography>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontSize: "16px",
+                                    fontWeight: "500",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                    paddingBottom: "40px",
+                                  }}
+                                >
+                                  {item.model}
+                                </Typography>
+                              </CardContent>
+                              <CardMedia
+                                sx={{
+                                  height: 100,
+                                  width: "200px",
+                                  margin: "auto",
+                                }}
+                                image={item.img}
+                                title={item.title}
+                              />
+
+                              <CardContent
+                                sx={{
+                                  paddingTop: "40px",
+                                  color: "#fff",
+                                  paddingBottom: "5px",
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    fontSize: "20px",
+                                    fontFamily: "Exo",
+                                    fontWeight: "600",
+                                    paddingLeft: "3px",
+                                    paddingBottom:"25px"
+                                  }}
+                                >
+                                  {item.price}
+                                </Typography>
+                              </CardContent>
+                              
+                              <Box
+                                sx={{
+                                  width: "100px",
+                                  height: "100px",
+                                  position: "absolute",
+                                  backgroundColor: "rgb(55,74,150,50%)",
+                                  top: "10",
+                                  left: "75px",
+                                  filter: "blur(48px)",
+                                  zIndex: "1",
+                                  borderRadius: "50%",
+                                  opacity: "150%",
+                                }}
+                              ></Box>
+                            </Card>
+                          </Grid>
+                        
+                      </>
+                    );
+                  })}
+                </Grid>
+              </TabPanel>
+              <TabPanel value="3" sx={{marginTop:"50px",position:"relative"}}>
+              <Grid container>
+                  {AudiluxuryCards?.map((item) => {
+                    return (
+                      <>
+                        
+                          <Grid
+                            sx={{ display: "flex", justifyContent: "center" }}
+                            xs={12} sm={6} md={4}
+                          >
+                            <Card
+                              sx={{
+                                minWidth: 290,
+                                padding: "20px 5px",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "flex-start",
+                                flexDirection: "column",
+                                borderRadius: "20px",
+                                backgroundColor: "#111213",
+                                paddingBottom: "5px",
+                                overflow: "hidden",
+                                marginBottom:"50px"
+                              }}
+                            >
+                              <CardContent>
+                                <Typography
+                                  gutterBottom
+                                  variant="h5"
+                                  component="div"
+                                  sx={{
+                                    fontSize: "24px",
+                                    fontWeight: "600",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  {item.title}
+                                </Typography>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontSize: "16px",
+                                    fontWeight: "500",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                    paddingBottom: "40px",
+                                  }}
+                                >
+                                  {item.model}
+                                </Typography>
+                              </CardContent>
+                              <CardMedia
+                                sx={{
+                                  height: 100,
+                                  width: "200px",
+                                  margin: "auto",
+                                }}
+                                image={item.img}
+                                title={item.title}
+                              />
+
+                              <CardContent
+                                sx={{
+                                  paddingTop: "40px",
+                                  color: "#fff",
+                                  paddingBottom: "5px",
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    fontSize: "20px",
+                                    fontFamily: "Exo",
+                                    fontWeight: "600",
+                                    paddingLeft: "3px",
+                                    paddingBottom:"25px"
+                                  }}
+                                >
+                                  {item.price}
+                                </Typography>
+                              </CardContent>
+                             
+                              <Box
+                                sx={{
+                                  width: "100px",
+                                  height: "100px",
+                                  position: "absolute",
+                                  backgroundColor: "rgb(55,74,150,50%)",
+                                  top: "10",
+                                  left: "75px",
+                                  filter: "blur(48px)",
+                                  zIndex: "1",
+                                  borderRadius: "50%",
+                                  opacity: "150%",
+                                }}
+                              ></Box>
+                            </Card>
+                          </Grid>
+                        
+                      </>
+                    );
+                  })}
+                </Grid>
+              </TabPanel>
+              <TabPanel value="4" sx={{marginTop:"50px",position:"relative"}}>
+              <Grid container>
+                  {PorscheluxuryCards?.map((item) => {
+                    return (
+                      <>
+                        
+                          <Grid
+                            sx={{ display: "flex", justifyContent: "center" }}
+                            xs={12} sm={6} md={4}
+                          >
+                            <Card
+                              sx={{
+                                minWidth: 290,
+                                padding: "20px 5px",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "flex-start",
+                                flexDirection: "column",
+                                borderRadius: "20px",
+                                backgroundColor: "#111213",
+                                paddingBottom: "5px",
+                                overflow: "hidden",
+                                marginBottom:"50px"
+                              }}
+                            >
+                              <CardContent>
+                                <Typography
+                                  gutterBottom
+                                  variant="h5"
+                                  component="div"
+                                  sx={{
+                                    fontSize: "24px",
+                                    fontWeight: "600",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  {item.title}
+                                </Typography>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontSize: "16px",
+                                    fontWeight: "500",
+                                    fontFamily: "Exo",
+                                    color: "#fff",
+                                    paddingBottom: "40px",
+                                  }}
+                                >
+                                  {item.model}
+                                </Typography>
+                              </CardContent>
+                              <CardMedia
+                                sx={{
+                                  height: 100,
+                                  width: "200px",
+                                  margin: "auto",
+                                }}
+                                image={item.img}
+                                title={item.title}
+                              />
+
+                              <CardContent
+                                sx={{
+                                  paddingTop: "40px",
+                                  color: "#fff",
+                                  paddingBottom: "5px",
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    fontSize: "20px",
+                                    fontFamily: "Exo",
+                                    fontWeight: "600",
+                                    paddingLeft: "3px",
+                                    paddingBottom:"25px"
+                                  }}
+                                >
+                                  {item.price}
+                                </Typography>
+                              </CardContent>
+                             
+                              <Box
+                                sx={{
+                                  width: "100px",
+                                  height: "100px",
+                                  position: "absolute",
+                                  backgroundColor: "rgb(55,74,150,50%)",
+                                  top: "10",
+                                  left: "75px",
+                                  filter: "blur(48px)",
+                                  zIndex: "1",
+                                  borderRadius: "50%",
+                                  opacity: "150%",
+                                }}
+                              ></Box>
+                            </Card>
+                          </Grid>
+                        
+                      </>
+                    );
+                  })}
+                </Grid>
+              </TabPanel>
+            </TabContext>
+          </Box>
+        </Container>
+      </Box>
+      {/* end luxury part  */}
     </>
   );
 };

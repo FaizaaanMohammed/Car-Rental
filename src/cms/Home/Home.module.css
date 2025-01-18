@@ -92,3 +92,6 @@
     background-color: white !important; /* Change dot color to white */
     top: -20px!important;
   }
+  .MuiTab-root{
+    min-width: 52px!important;
+  }
