@@ -35,6 +35,12 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import tesla from "../../Assets/images/tesla.png";
 import audi from "../../Assets/images/Audi.png";
 import porsche from "../../Assets/images/porsche.png";
+import tesla1 from "../../Assets/images/tesla1.png";
+import porsche1 from "../../Assets/images/porsche1.png";
+import audi1 from "../../Assets/images/audi1.png";
+import Bmw from "../../Assets/images/bmw.png";
+import lamborghni from "../../Assets/images/lamborghni.png";
+import A from "../../Assets/images/A.png";
 import luxury1 from "../../Assets/images/luxury1.png";
 import luxury2 from "../../Assets/images/luxury2.png";
 import luxury3 from "../../Assets/images/luxury3.png";
@@ -42,6 +48,7 @@ import luxury4 from "../../Assets/images/luxury4.png";
 import luxury5 from "../../Assets/images/luxury5.png";
 import subscribeBackground from "../../Assets/images/subscribe-bg.png";
 import subscribecar from "../../Assets/images/subscribe car.png";
+
 
 const Home = () => {
   const temp = [
@@ -1525,7 +1532,7 @@ const Home = () => {
                   xs: "60px",
                   sm: "0px",
                 },
-                paddingLeft:{md:"80px",xs:"0px"}
+                paddingLeft: { md: "80px", xs: "0px" },
               }}
             >
               <Typography
@@ -1543,7 +1550,7 @@ const Home = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: {sm:"16px",xs:"15px"},
+                  fontSize: { sm: "16px", xs: "15px" },
                   fontWeight: "500",
                   color: "#BABEC4",
                   fontFamily: "Exo",
@@ -1553,14 +1560,23 @@ const Home = () => {
                   padding: "25px 0px",
                 }}
               >
-                Be the first to receive all the information about <br className={Hero.break} /> our
-                products and new cars by email by subscribing <br className={Hero.break} /> to our
-                mailing list.
+                Be the first to receive all the information about{" "}
+                <br className={Hero.break} /> our products and new cars by email
+                by subscribing <br className={Hero.break} /> to our mailing
+                list.
               </Typography>
               <Box>
                 <Button
                   variant="contained"
-                  sx={{ padding: {sm:"15px 30px",xs:"12px 18px"}, borderRadius: "12px",fontFamily:"Exo",textTransform:"capitalize",fontSize:"16px",fontWeight:"500",lineHeight:"140%" }}
+                  sx={{
+                    padding: { sm: "15px 30px", xs: "12px 18px" },
+                    borderRadius: "12px",
+                    fontFamily: "Exo",
+                    textTransform: "capitalize",
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    lineHeight: "140%",
+                  }}
                 >
                   Subscirbe now
                 </Button>
@@ -1578,6 +1594,51 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
+      {/* end subscribe part */}
+      {/* start Logo part */}
+
+      <Box
+        sx={{
+          backgroundColor: "#0A0A0B",
+          padding: { xs: "50px 0px", sm: "70px 0px" },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid
+            container
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+             
+            }}
+          >
+            <Grid xs={4} sm={2} sx={{display:"flex",justifyContent:"center",marginBottom:{xs:"40px",sm:"0px"}}}>
+              <img src={porsche1} alt="" />
+            </Grid>
+            <Grid xs={4} sm={2} sx={{display:"flex",justifyContent:"center",marginBottom:{xs:"40px",sm:"0px"}}}>
+              <img src={audi1} alt="" />
+            </Grid>
+            <Grid xs={4} sm={2} sx={{display:"flex",justifyContent:"center",marginBottom:{xs:"40px",sm:"0px"}}}>
+              <img src={tesla1} alt="" />
+            </Grid>
+            <Grid xs={4} sm={2} sx={{display:"flex",justifyContent:"center",}}>
+              <img src={Bmw} alt="" />
+            </Grid>
+            <Grid xs={4} sm={2} sx={{display:"flex",justifyContent:"center"}}>
+              <img src={lamborghni} alt="" />
+            </Grid>
+            <Grid
+              xs={4}
+              sm={2}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <img src={A} alt="" />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      {/* end logo part  */}
     </>
   );
 };
